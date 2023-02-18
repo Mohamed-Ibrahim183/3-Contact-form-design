@@ -1,0 +1,151 @@
+/* start variables */
+
+:root {
+  --main-transition-duration: 0.3s;
+}
+/* End variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* START CONTACT */
+.contact .container {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .container .image-side {
+  flex-basis: 50%;
+  min-height: 50vh;
+  background-image: url(../imgs/mountain-477832.jpg);
+  background-size: cover;
+  padding-left: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact .container .image-side p:first-of-type {
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+
+  font-size: 20px;
+}
+.contact .container .image-side p:first-of-type::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f3c5";
+  font-weight: 900;
+  position: absolute;
+  left: -20px;
+}
+.contact .container .image-side address {
+  color: white;
+  font-size: 17px;
+}
+.contact .container .image-side p,
+.contact .container .image-side address {
+  margin-bottom: 30px;
+}
+.contact .container .image-side p:last-of-type {
+  color: white;
+  text-transform: uppercase;
+
+  position: relative;
+  font-size: 20px;
+}
+.contact .container .image-side p:last-of-type::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+  font-weight: 900;
+  left: -22px;
+}
+.contact .container .image-side a {
+  color: white;
+  display: inline-block;
+  transition: var(--main-transition-duration);
+}
+.contact .container .image-side a:hover {
+  transform: scale(1.1);
+}
+.contact .container .form-side {
+  background-color: white;
+  padding: 20px;
+  flex-basis: 49%;
+  padding-top: 50px;
+}
+
+.contact .container .form-side .in {
+  display: block;
+  border-radius: 15px;
+  padding: 6px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.contact .container .form-side textarea {
+  width: 100%;
+  display: block;
+  height: 150px;
+  border-radius: 15px;
+  padding: 6px;
+}
+.contact .container .form-side .sub {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  float: right;
+  border-radius: 30px;
+  transition: var(--main-transition-duration);
+}
+.contact .container .form-side .sub:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+@media (max-width: 767px) {
+  .contact .container .image-side {
+    flex-basis: 100%;
+  }
+  .contact .container .form-side {
+    flex-basis: 100%;
+  }
+  .contact .container {
+    flex-direction: column;
+  }
+}
+
+/* END CONTACT */
